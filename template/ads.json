@@ -1,0 +1,23 @@
+{
+  "vertical-1": {
+    "client": "",
+    "slot": "",
+    "format": "",
+    "responsive": true,
+    "horizontal": false
+  },
+  "vertical-2": {
+    "client": "",
+    "slot": "",
+    "format": "",
+    "responsive": true,
+    "horizontal": false
+  },
+  "horizontal-1": {
+    "client": "",
+    "slot": "",
+    "format": "",
+    "responsive": true,
+    "horizontal": true
+  }
+}
