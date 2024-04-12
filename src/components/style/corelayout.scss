@@ -1,7 +1,15 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
 .corelayout {
   display: flex;
   flex-direction: row;
   height: inherit;
   justify-content: space-around;
   align-items: center;
+}
+
+@include media-breakpoint-down(sm) {
+  .corelayout {
+    flex-direction: column;
+  }
 }

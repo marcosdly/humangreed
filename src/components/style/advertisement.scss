@@ -1,20 +1,43 @@
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+$max-width: 200px;
+$max-height: 500px;
+$min-width: 90px;
+$min-height: 90px;
+
 .googleads-container {
-  max-width: 200px;
-  max-height: 500px;
-  min-width: 150px;
-  min-height: 400px;
+  max-width: $max-width;
+  max-height: $max-height;
+  min-width: $min-width;
+  min-height: $min-height;
+  height: 100%;
   border: gray dashed 1px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
   position: relative;
+  margin: map-get($spacers, 2);
+  padding: map-get($spacers, 1);
 
   &::before {
     content: "Advertisement";
+    font-size: 0.7rem;
     display: block;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: gray;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .googleads-container {
+    max-width: $max-height;
+    max-height: $max-width;
+    height: initial;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }
