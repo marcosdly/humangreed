@@ -1,9 +1,10 @@
 import { Component } from "preact";
 import { Horizontal1, Vertical1, Vertical2 } from "./Advertisement";
+import "./style/corelayout.scss";
 
 export class CoreLayout extends Component {
-  containerClass = "container-sm";
-  containerClassWidth = 576;
+  static containerClass = "container-sm";
+  static containerClassWidth = 576;
 
   mobileState: boolean;
 
@@ -25,7 +26,7 @@ export class CoreLayout extends Component {
       document.documentElement.clientWidth || 0,
       window.innerWidth || 0,
     );
-    return vw <= this.containerClassWidth;
+    return vw <= CoreLayout.containerClassWidth;
   }
 
   render() {

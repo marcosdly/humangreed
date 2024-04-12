@@ -1,5 +1,6 @@
 import { useEffect } from "preact/hooks";
 import ads from "../../config/secret/ads.json";
+import "./style/advertisement.scss";
 
 interface AdvertisementProps {
   client: string;
@@ -24,8 +25,8 @@ export function Advertisement(props: AdvertisementProps) {
     loadGoogleAd(props.client);
   }, []);
 
-  const containerClasses = ["adsbygoogle-container"];
-  if (props.horizontal) containerClasses.push("adsbygoogle-horizontal");
+  const containerClasses = ["googleads-container"];
+  if (props.horizontal) containerClasses.push("googleads-horizontal");
 
   return (
     <div className={containerClasses.join(" ")}>
@@ -34,8 +35,8 @@ export function Advertisement(props: AdvertisementProps) {
         style="display:block"
         data-ad-client={props.client}
         data-ad-slot={props.slot}
-        data-ad-format={props.format}
-        data-full-width-responsive={new String(props.responsive)}
+        // data-ad-format={props.format}
+        // data-full-width-responsive={new String(props.responsive)}
       ></ins>
     </div>
   );
