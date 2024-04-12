@@ -1,0 +1,14 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+
+  .btn-toolbar {
+    margin-left: auto;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+}
